@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #494545;
+    --third-color: #555;
+}
+
+/* --- app.html ---*/
+
+.page-main-title {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --- book-form.html --- */
+
+/* Contenitore principale */
+.form-container {
+    background-color: #ffffff;
+    max-width: 450px; /* Meglio larghezza fissa che fit-content per stabilità */
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Ombra morbida */
+    border: 1px solid #eee;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Griglia del Form */
+.form-container form {
+    display: grid;
+    gap: 15px;
+}
+
+/* Stile per ogni blocco Label + Input */
+.field {
+    display: flex;
+    flex-direction: column; /* Label sopra l'input */
+    gap: 8px;
+}
+
+.field label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    font-family: sans-serif;
+}
+
+/* Styling degli Input */
+input[type="text"] {
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Animazione fluida */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff; /* Blu professionale */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Styling del Bottone */
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* --- book-list.html --- */
+
+.book-list {
+    background-color: aliceblue;
+    padding: 5px;
+}
+
+.book-list ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+}
+
+.book-list li {
+    padding: 20px;
+    /* margin: 10px;  */
+    background-color: rgb(217, 235, 251);
+    border-radius: 10px;
+}
+
+li p.title {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+}
+
+li .p-year {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--third-color);
+    padding-top: 10px;
+}

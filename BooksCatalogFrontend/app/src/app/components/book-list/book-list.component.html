@@ -1,0 +1,13 @@
+<div class="book-list">
+    <ul>
+        @for (book of books; track book.id) {
+        <li>
+            <p class="title"><strong>{{ book.title }}</strong></p> <br>
+            <span class="author">{{ book.author }}</span> <br>
+            <span class="p-year">{{ book.publicationYear }}</span>
+        </li>
+        } @empty {
+        <p>Catalog empty</p>
+        }
+    </ul>
+</div>
